@@ -1,4 +1,4 @@
-## ALPHA Router Configuration  
+## ALFA Router Configuration  
 ### Tunnel encryption  
 ```
 crypto isakmp policy 10
