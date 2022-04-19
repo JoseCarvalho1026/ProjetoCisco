@@ -14,11 +14,12 @@ crypto ipsec transform-set TRANS2 ah-sha-hmac esp-aes 256 esp-sha-hmac
 crypto map MAPA 10 ipsec-isakmp 
  set peer 2.8.0.1
  set transform-set TRANS2 
- match address 100
+ match address 101
 ``` 
 ### Tunnel with ENTA router 
 ```
 interface Tunnel200
+ no shutdown
  ip address 192.168.8.6 255.255.255.252
  tunnel source Serial0/1/1
  tunnel destination 2.8.0.1
@@ -26,6 +27,7 @@ interface Tunnel200
 ### Interfaces
 ```
 interface FastEthernet0/0
+ no shutdown
  ip address 172.16.8.3 255.255.255.0
  ip nat inside
  ip virtual-reassembly in
@@ -33,6 +35,7 @@ interface FastEthernet0/0
  speed auto
  
 interface Serial0/1/1
+ no shutdown
  ip address 2.8.0.2 255.255.255.252
  ip nat outside
  ip virtual-reassembly in
@@ -42,8 +45,6 @@ interface Serial0/1/1
 ```
 router eigrp 200
  network 172.16.8.0 0.0.0.255
- network 172.17.8.0 0.0.0.255
- network 172.18.8.0 0.0.0.255
  network 192.168.8.4 0.0.0.3
  redistribute static
  passive-interface FastEthernet0/0
