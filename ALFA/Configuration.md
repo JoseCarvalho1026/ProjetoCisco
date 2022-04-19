@@ -57,7 +57,7 @@ ip nat inside source list 1 interface Serial0/1/1 overload
 ip nat inside source static tcp 172.17.8.2 80 1.8.0.2 80 
 ip nat inside source static tcp 172.17.8.2 443 1.8.0.2 443
 ```
-### ACL
+### Access List
 ```
 access-list 1 permit 10.0.0.0 0.255.255.255
 access-list 1 permit 172.16.0.0 0.15.255.255
