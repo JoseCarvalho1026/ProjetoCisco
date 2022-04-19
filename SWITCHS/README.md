@@ -45,7 +45,21 @@ interface FastEthernet0/15
  switchport mode trunk
 ```
 ```
+interface FastEthernet0/11
+ no shutdown
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
 
+interface FastEthernet0/12
+ no shutdown
+ switchport mode trunk
+ channel-protocol lacp
+ channel-group 1 mode active
+     
+interface FastEthernet0/13
+ no shutdown
+ switchport mode trunk
 ```
 ```
 
