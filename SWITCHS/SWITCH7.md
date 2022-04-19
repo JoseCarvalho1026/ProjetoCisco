@@ -1,4 +1,4 @@
-## Switch11 Configuration  
+## Switch7 Configuration  
 ### Spanning Tree 
 ```
 spanning-tree mode pvst
