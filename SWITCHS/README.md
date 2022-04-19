@@ -118,13 +118,12 @@ interface FastEthernet0/13
  switchport mode trunk
 ```
 ```
-hostname Switch11
+hostname Switch14
 !
 vtp domain enta.pt
 !
 spanning-tree mode pvst
 spanning-tree extend system-id
-spanning-tree vlan 30 priority 28672
 !
 interface Port-channel2
  no shutdown
@@ -132,29 +131,22 @@ interface Port-channel2
 !
 interface FastEthernet0/4
  no shutdown
- switchport access vlan 30
+ switchport access vlan 10
  switchport mode access
-!
-interface FastEthernet0/5
- no shutdown
- switchport mode access
- switchport voice vlan 20
- mls qos trust cos
- spanning-tree portfast
 !
 interface FastEthernet0/11
  no shutdown
  switchport mode trunk
  channel-protocol lacp
  channel-group 2 mode active
-!       
+!
 interface FastEthernet0/12
  no shutdown
  switchport mode trunk
  channel-protocol lacp
  channel-group 2 mode active
 !
-interface FastEthernet0/13
+interface FastEthernet0/15
  no shutdown
  switchport mode trunk
 ```
