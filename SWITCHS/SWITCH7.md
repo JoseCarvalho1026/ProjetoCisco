@@ -1,5 +1,20 @@
 ## Switch7 Configuration  
-### Spanning Tree 
+### VTP
+```
+vtp domain enta.pt
+```
+### Vlans
+```
+vlan 10
+name v10
+
+vlan 20
+name v20
+
+vlan 30
+name v30
+```
+### Spanning Tree
 ```
 spanning-tree mode pvst
 spanning-tree extend system-id
