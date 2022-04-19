@@ -85,30 +85,35 @@ interface Tunnel200
 ### Interfaces 
 ```
 interface GigabitEthernet0/0.10
+ no shutdown
  encapsulation dot1Q 10
  ip address 10.0.8.1 255.255.255.0
  ip nat inside
  ip virtual-reassembly in
 
 interface GigabitEthernet0/0.20
+ no shutdown
  encapsulation dot1Q 20
  ip address 10.1.8.1 255.255.255.0
  ip nat inside
  ip virtual-reassembly in
 
 interface GigabitEthernet0/0.30
+ no shutdown
  encapsulation dot1Q 30
  ip address 10.2.8.1 255.255.255.0
  ip nat inside
  ip virtual-reassembly in
 
 interface Serial0/0/0
+ no shutdown
  ip address 1.8.0.1 255.255.255.252
  ip nat outside
  ip virtual-reassembly in
  crypto map OMAPA
 
 interface Serial0/0/1
+ no shutdown
  ip address 2.8.0.1 255.255.255.252
  ip nat outside
  clock rate 2000000
