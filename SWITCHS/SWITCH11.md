@@ -1,4 +1,8 @@
-## Switch11 Configuration  
+## Switch11 Configuration
+### VTP
+```
+vtp domain enta.pt
+```
 ### Spanning Tree 
 ```
 spanning-tree mode pvst
