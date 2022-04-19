@@ -23,7 +23,7 @@ interface Tunnel100
  tunnel source Serial0/1/1
  tunnel destination 1.8.0.1
 ```
-### Used interfaces  
+### Interfaces  
 ```
 interface FastEthernet0/0
  ip address 172.16.8.1 255.255.255.0
