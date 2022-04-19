@@ -46,8 +46,6 @@ interface Serial0/1/1
 ```
 router eigrp 100
  network 172.16.8.0 0.0.0.255
- network 172.17.8.0 0.0.0.255
- network 172.18.8.0 0.0.0.255
  network 192.168.8.0 0.0.0.3
  redistribute static
  passive-interface FastEthernet0/0
