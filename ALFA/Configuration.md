@@ -14,11 +14,12 @@ crypto ipsec transform-set TRANS ah-sha-hmac esp-aes 256 esp-sha-hmac
 crypto map OMAPA 10 ipsec-isakmp 
  set peer 1.8.0.1
  set transform-set TRANS 
- match address 100
+ match address 101
 ```
 ### Tunnel with ENTA router  
 ```
 interface Tunnel100
+ no shutdown
  ip address 192.168.8.2 255.255.255.252
  tunnel source Serial0/1/1
  tunnel destination 1.8.0.1
@@ -26,6 +27,7 @@ interface Tunnel100
 ### Interfaces  
 ```
 interface FastEthernet0/0
+ no shutdown
  ip address 172.16.8.1 255.255.255.0
  ip nat inside
  ip virtual-reassembly in
@@ -33,6 +35,7 @@ interface FastEthernet0/0
  speed auto
  
 interface Serial0/1/1
+ no shutdown
  ip address 1.8.0.2 255.255.255.252
  ip nat outside
  ip virtual-reassembly in
@@ -67,5 +70,5 @@ access-list 1 permit 192.168.0.0 0.0.255.255
 access-list 100 permit tcp any any eq www
 access-list 100 permit tcp any any eq 443
 access-list 100 permit ip any 1.8.0.0 0.0.0.3
-access-list 100 permit gre host 1.8.0.2 host 1.8.0.1
+access-list 101 permit gre host 1.8.0.2 host 1.8.0.1
 ```
