@@ -25,7 +25,6 @@ ip dhcp pool VLAN30
 ```
 ### Telephone
 ```
-license udi pid CISCO2911/K9 sn FCZ16337LEM
 license boot module c2900 technology-package securityk9
 license boot module c2900 technology-package uck9
 
