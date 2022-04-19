@@ -6,6 +6,7 @@ crypto isakmp policy 10
  authentication pre-share
  group 5
  lifetime 3600
+ 
 crypto isakmp key Passw0rd address 1.8.0.1
 
 crypto ipsec transform-set TRANS ah-sha-hmac esp-aes 256 esp-sha-hmac 
