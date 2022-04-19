@@ -1,4 +1,8 @@
-## Switch14 Configuration  
+## Switch14 Configuration 
+### VTP
+```
+vtp domain enta.pt
+```
 ### Port channel
 ```
 interface Port-channel2
