@@ -81,7 +81,7 @@ interface Tunnel200
  tunnel source Serial0/0/1
  tunnel destination 2.8.0.2
 ```
-### Used interfaces 
+### Interfaces 
 ```
 interface GigabitEthernet0/0.10
  encapsulation dot1Q 10
