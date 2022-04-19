@@ -73,11 +73,13 @@ crypto map OMAPA 10 ipsec-isakmp
 ### Tunnel with ALFA and BETA router 
 ```
 interface Tunnel100
+ no shutdown
  ip address 192.168.8.1 255.255.255.252
  tunnel source Serial0/0/0
  tunnel destination 1.8.0.2
 
 interface Tunnel200
+ no shutdown
  ip address 192.168.8.5 255.255.255.252
  tunnel source Serial0/0/1
  tunnel destination 2.8.0.2
