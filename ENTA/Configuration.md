@@ -51,6 +51,7 @@ crypto isakmp policy 10
  authentication pre-share
  group 5
  lifetime 3600
+ 
 crypto isakmp key Passw0rd address 1.8.0.2       
 crypto isakmp key Passw0rd address 2.8.0.2       
 
