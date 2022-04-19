@@ -63,7 +63,7 @@ crypto ipsec transform-set TRANS2 ah-sha-hmac esp-aes 256 esp-sha-hmac
 crypto map MAPA 10 ipsec-isakmp 
  set peer 2.8.0.2
  set transform-set TRANS2 
- match address 100
+ match address 101
 
 crypto map OMAPA 10 ipsec-isakmp 
  set peer 1.8.0.2
