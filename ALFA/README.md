@@ -21,6 +21,7 @@ interface Tunnel100
  ip address 192.168.8.2 255.255.255.252
  tunnel source Serial0/1/1
  tunnel destination 1.8.0.1
+!
 interface FastEthernet0/0
  no shutdown
  ip address 172.16.8.1 255.255.255.0
@@ -28,7 +29,7 @@ interface FastEthernet0/0
  ip virtual-reassembly in
  duplex auto
  speed auto
- 
+!
 interface Serial0/1/1
  no shutdown
  ip address 1.8.0.2 255.255.255.252
@@ -44,7 +45,6 @@ router eigrp 100
  passive-interface FastEthernet0/0
 !
 ip forward-protocol nd
-!
 !
 no ip http server
 no ip http secure-server
