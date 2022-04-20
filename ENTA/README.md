@@ -61,6 +61,12 @@ interface Tunnel200
  ip address 192.168.8.5 255.255.255.252
  tunnel source Serial0/0/1
  tunnel destination 2.8.0.2
+ !
+interface GigabitEthernet0/0
+ no shutdown
+ no ip address
+ duplex auto
+ speed auto
 !
 interface GigabitEthernet0/0.10
  no shutdown
