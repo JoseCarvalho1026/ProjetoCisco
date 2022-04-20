@@ -9,7 +9,6 @@ crypto isakmp policy 10
 !
 crypto isakmp key Passw0rd address 2.8.0.1
 !
-!
 crypto ipsec transform-set TRANS2 ah-sha-hmac esp-aes 256 esp-sha-hmac 
 !
 crypto map MAPA 10 ipsec-isakmp 
@@ -30,7 +29,7 @@ interface FastEthernet0/0
  ip virtual-reassembly in
  duplex auto
  speed auto
- 
+!
 interface Serial0/1/1
  no shutdown
  ip address 2.8.0.2 255.255.255.252
